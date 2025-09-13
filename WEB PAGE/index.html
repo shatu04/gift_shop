@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiftShop - Find the Perfect Gift</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <i class="fas fa-gift"></i>
+                    <h1>GiftShop</h1>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search for products..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="nav">
+                    <button id="authBtn" class="nav-btn">
+                        <i class="fas fa-user"></i>
+                        <span id="authText">Sign In</span>
+                    </button>
+                    <button id="cartBtn" class="nav-btn cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span id="cartCount" class="cart-count">0</span>
+                    </button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-search">
+                    <input type="text" id="mobileSearchInput" placeholder="Search for products..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="mobile-nav">
+                    <button id="mobileAuthBtn" class="nav-btn">
+                        <i class="fas fa-user"></i>
+                        <span id="mobileAuthText">Sign In</span>
+                    </button>
+                    <button id="mobileCartBtn" class="nav-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart (<span id="mobileCartCount">0</span>)</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find the Perfect Gift</h1>
+                <p>Discover amazing gifts for every occasion and every person you care about</p>
+                <button class="hero-btn">
+                    <span>Shop Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="hero-features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Curated Selection</h3>
+                    <p>Hand-picked gifts for every taste and budget</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Fast Shipping</h3>
+                    <p>Free delivery on orders over $50</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Made with Love</h3>
+                    <p>Every gift tells a story of care and thoughtfulness</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2>Shop by Category</h2>
+            <div class="category-grid" id="categoryGrid">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <main class="main">
+        <div class="container">
+            <div class="products-header">
+                <h2 id="productsTitle">All Products</h2>
+                <p id="productsCount">Loading products...</p>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be populated by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-gift"></i>
+                        <span>GiftShop</span>
+                    </div>
+                    <p>Your one-stop destination for perfect gifts. We curate amazing products for every occasion.</p>
+                    <div class="social-links">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Home & Garden</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Books</a></li>
+                        <li><a href="#">Toys & Games</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@giftshop.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Gift Street, NY 10001</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 GiftShop. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="authModalTitle">Sign In</h2>
+                <button class="close-btn" id="closeAuthModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="authForm" class="auth-form">
+                <div class="form-group" id="nameGroup" style="display: none;">
+                    <label>Full Name</label>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="nameInput" placeholder="Enter your name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="emailInput" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="passwordInput" placeholder="Enter your password" required>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn" id="authSubmitBtn">Sign In</button>
+            </form>
+            <div class="auth-switch">
+                <p id="authSwitchText">Don't have an account?</p>
+                <button id="authSwitchBtn" class="switch-btn">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content product-modal-content">
+            <button class="close-btn" id="closeProductModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="product-modal-grid">
+                <div class="product-modal-image">
+                    <img id="modalProductImage" src="" alt="">
+                    <div id="modalOutOfStock" class="out-of-stock-badge" style="display: none;">Out of Stock</div>
+                </div>
+                <div class="product-modal-details">
+                    <div class="product-modal-category" id="modalProductCategory"></div>
+                    <h1 id="modalProductName"></h1>
+                    <p id="modalProductDescription"></p>
+                    <div class="product-rating">
+                        <div class="stars" id="modalProductStars"></div>
+                        <span id="modalProductRating"></span>
+                        <span id="modalProductReviews"></span>
+                    </div>
+                    <div id="modalProductFeatures" class="product-features"></div>
+                    <div class="product-modal-footer">
+                        <div class="price-stock">
+                            <div class="price" id="modalProductPrice"></div>
+                            <div class="stock-status" id="modalStockStatus"></div>
+                        </div>
+                        <button id="modalAddToCartBtn" class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content cart-modal-content">
+            <div class="modal-header">
+                <h2>Shopping Cart</h2>
+                <button class="close-btn" id="closeCartModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-content" id="cartContent">
+                <!-- Cart items will be populated by JavaScript -->
+            </div>
+            <div class="cart-footer" id="cartFooter">
+                <div class="cart-total">
+                    <span>Total: <span id="cartTotal">$0.00</span></span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Proceed to Checkout</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
